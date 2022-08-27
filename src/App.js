@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Carros from "./Components/Carros";
+import Carteirinha from "./Components/Carterinha";
+import Semaforo from "./Components/Semaforo";
+import Imagem from "./Images/Carteirinha.png";
 
-function App() {
+const App = () => {
+  const carros = [
+    "BMW",
+    "Mitsubishi",
+    "Mercedes",
+    "Fiat",
+    "Ford",
+    "Jeep",
+    "Nissan",
+    "Volkswagen",
+    "Honda",
+    "Hyundai",
+  ];
+
+  const imagem = Imagem;
+  const nome = "Daniel";
+  const rm = "96235";
+  const curso = "ADS";
+  const turma = "1TDSR";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Daniel Luiz de Paula Junior RM:96235 1TDSR</h1>
+      <Semaforo />
+      <Carros carros={carros} />
+      <Carteirinha
+        imagem={imagem}
+        nome={nome}
+        rm={rm}
+        curso={curso}
+        turma={turma}
+      />
+      <Carteirinha
+        imagem={imagem}
+        nome={nome}
+        rm={rm}
+        curso={curso}
+        turma={turma}
+      />
+      <Carteirinha
+        imagem={imagem}
+        nome={nome}
+        rm={rm}
+        curso={curso}
+        turma={turma}
+      />
+    </>
   );
-}
+};
 
 export default App;
