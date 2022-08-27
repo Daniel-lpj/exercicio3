@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 const Semaforo = () => {
   const [lista, setLista] = useState(["Pare", "Atenção", "Siga"]);
 
   const trocaLista = () => {
-    setLista([...lista.sort()]);
+    setLista(lista.splice(1, 2));
   };
+
+  useEffect(() => {
+    if (lista.length < 1) {
+      setLista(["Pare", "Atenção", "Siga"]);
+    }
+  }, [lista]);
 
   return (
     <>
       <div>
-        {lista.map((item, index) => (
-          <h2 key={index}>{item}</h2>
-        ))}
+        <h2>{lista[0]}</h2>
       </div>
-
       <button onClick={trocaLista}>Troca</button>
     </>
   );

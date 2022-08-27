@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const Carteirinha = (props) => {
-  const Container = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  `;
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
 
+const Carteirinha = (props) => {
   return (
     <Container>
       <img src={props.imagem} alt="Foto carteirinha" />
