@@ -1,5 +1,6 @@
 import React from "react";
 import Carros from "./Components/Carros";
+import CarteirinhaInput from "./Components/CarteirinhaImput";
 import Carteirinha from "./Components/Carterinha";
 import Semaforo from "./Components/Semaforo";
 import Imagem from "./Images/Carteirinha.png";
@@ -50,6 +51,7 @@ const App = () => {
         curso={curso}
         turma={turma}
       />
+      <CarteirinhaInput />
     </>
   );
 };
